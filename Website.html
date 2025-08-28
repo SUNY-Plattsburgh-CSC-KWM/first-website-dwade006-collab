@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <title>Hello World Website</title>
     <script>
-        function function-name() {
+        function FuncName() {
             // >>> put a prompt here, ask the user for a new name <<< 
+            const newName = prompt("Enter a name!");
             // Use document.getElementById("your id").textContent = .... to change the level 1 header to say something new
+            if (newName) {
+                document.getElementById("pageHeader").textContent = `Hello, ${newName}!`;
+            }
         }
     </script>
 </head>
 <body>
-    <h1 id="your-id-here">Hello, World!</h1>
-    <button onclick="function-name()">label-on-button</button>
+    <h1 id="pageHeader">Hello, World!</h1>
+    <button onclick="FuncName()">Magic Button</button>
 </body>
 </html>
